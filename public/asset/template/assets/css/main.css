@@ -18,7 +18,7 @@
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root { 
+:root {
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #124265; /* Color for headings, subheadings and title throughout the website */
@@ -2044,3 +2044,44 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+/* Mengatur tampilan card */
+.card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .card-body {
+    padding: 20px;
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+
+  .card-description {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+  }
+
+  .btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+
+  .btn:hover {
+    background-color: #0056b3;
+  }
+
+  /* Hover effect untuk card */
+  .hover-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }

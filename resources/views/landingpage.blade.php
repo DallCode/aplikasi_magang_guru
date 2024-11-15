@@ -21,39 +21,25 @@
         </div>
 
         <div class="row gy-4 mt-5">
-          <div class="col-md-6 col-lg-3" data-aos="zoom-out" data-aos-delay="100">
-            <div class="icon-box">
-              <div class="icon"><i class="bi bi-easel"></i></div>
-              <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
-            </div>
-          </div><!--End Icon Box -->
+            <!-- Guru Login Card -->
+            <div class="col-md-6 col-lg-6" data-aos="zoom-out" data-aos-delay="100">
+              <div class="icon-box">
+                <h4 class="title"><a href="/guru-login">Login Guru</a></h4>
+                <p class="description">Akses untuk para guru untuk mengelola materi dan mengatur jadwal pengajaran.</p>
+                <a href="/guru-login" class="btn btn-primary">Login sebagai Guru</a>
+              </div>
+            </div><!-- End Guru Card -->
 
-          <div class="col-md-6 col-lg-3" data-aos="zoom-out" data-aos-delay="200">
-            <div class="icon-box">
-              <div class="icon"><i class="bi bi-gem"></i></div>
-              <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
-              <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
-            </div>
-          </div><!--End Icon Box -->
+            <!-- Admin Login Card -->
+            <div class="col-md-6 col-lg-6" data-aos="zoom-out" data-aos-delay="200">
+              <div class="icon-box">
+                <h4 class="title"><a href="/admin-login">Login Admin</a></h4>
+                <p class="description">Akses untuk admin untuk mengelola pengguna dan mengatur sistem sekolah.</p>
+                <a href="/admin-login" class="btn btn-primary">Login sebagai Admin</a>
+              </div>
+            </div><!-- End Admin Card -->
+          </div>
 
-          <div class="col-md-6 col-lg-3" data-aos="zoom-out" data-aos-delay="300">
-            <div class="icon-box">
-              <div class="icon"><i class="bi bi-geo-alt"></i></div>
-              <h4 class="title"><a href="">Magni Dolores</a></h4>
-              <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
-            </div>
-          </div><!--End Icon Box -->
-
-          <div class="col-md-6 col-lg-3" data-aos="zoom-out" data-aos-delay="400">
-            <div class="icon-box">
-              <div class="icon"><i class="bi bi-command"></i></div>
-              <h4 class="title"><a href="">Nemo Enim</a></h4>
-              <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
-            </div>
-          </div><!--End Icon Box -->
-
-        </div>
       </div>
 
     </section><!-- /Hero Section -->
