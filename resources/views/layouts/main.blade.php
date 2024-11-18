@@ -27,6 +27,7 @@
   <!-- Main CSS File -->
   <link href="{{ asset('asset/template/assets/css/main.css')}}" rel="stylesheet">
 
+
   <!-- =======================================================
   * Template Name: OnePage
   * Template URL: https://bootstrapmade.com/onepage-multipurpose-bootstrap-template/
@@ -122,14 +123,6 @@
           </ul>
         </div>
 
-        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-          <h4>Contact Us</h4>
-          <p>A108 Adam Street</p>
-          <p>New York, NY 535022</p>
-          <p>United States</p>
-          <p class="mt-4"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-          <p><strong>Email:</strong> <span>info@example.com</span></p>
-        </div>
 
       </div>
     </div>

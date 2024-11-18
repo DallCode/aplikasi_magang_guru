@@ -10,3 +10,5 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/login-admin', [App\Http\Controllers\LoginAdminController::class, 'index'])->name('login-admin');

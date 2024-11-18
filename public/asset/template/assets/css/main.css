@@ -895,7 +895,7 @@ section,
   background: color-mix(in srgb, var(--accent-color), transparent 15%);
 }
 
-.hero .icon-box {
+/* .hero .icon-box {
   background-color: var(--surface-color);
   padding: 50px 30px;
   position: relative;
@@ -943,7 +943,7 @@ section,
   .hero .icon-box:hover .title a {
     color: var(--accent-color);
   }
-}
+} */
 
 /*--------------------------------------------------------------
 # About Section
@@ -1067,6 +1067,7 @@ section,
 
 .clients .client-logo {
   display: flex;
+  flex: 1;
   justify-content: center;
   align-items: center;
   overflow: hidden;
@@ -1074,7 +1075,7 @@ section,
 
 .clients .client-logo img {
   padding: 20px 40px;
-  max-width: 90%;
+  max-width: 200px;
   transition: 0.3s;
   opacity: 0.5;
   filter: grayscale(100);
@@ -1449,6 +1450,21 @@ section,
 /*--------------------------------------------------------------
 # Team Section
 --------------------------------------------------------------*/
+.team .row {
+    display: flex; /* Aktifkan Flexbox */
+    justify-content: space-between; /* Beri jarak antar anggota tim */
+    align-items: stretch; /* Pastikan semua anggota tim sejajar secara vertikal */
+    flex-wrap: nowrap; /* Hindari item berpindah ke baris baru */
+    gap: 20px; /* Tambahkan jarak antar kolom (opsional) */
+  }
+
+  .team .col-lg-3 {
+    flex: 1; /* Setiap anggota tim memiliki lebar fleksibel */
+    max-width: 100%; /* Pastikan tidak ada batasan lebar */
+    text-align: center; /* Pusatkan konten secara horizontal */
+  }
+
+
 .team .team-member {
   background-color: var(--surface-color);
   overflow: hidden;
@@ -1516,6 +1532,24 @@ section,
   opacity: 1;
   bottom: 15px;
 }
+
+@media (max-width: 992px) {
+    .team .row {
+      flex-wrap: wrap; /* Izinkan item berpindah ke baris berikutnya */
+    }
+    .team .col-lg-3 {
+      flex: 0 1 calc(50% - 20px); /* Dua anggota per baris pada layar kecil */
+      max-width: calc(50% - 20px); /* Batasi lebar untuk responsivitas */
+    }
+  }
+
+  @media (max-width: 640px) {
+    .team .col-lg-3 {
+      flex: 0 1 100%; /* Satu anggota per baris pada layar sangat kecil */
+      max-width: 100%; /* Lebar penuh */
+    }
+  }
+
 
 /*--------------------------------------------------------------
 # Pricing Section
@@ -2045,43 +2079,157 @@ section,
   /* Add your styles here */
 }
 
-/* Mengatur tampilan card */
-.card {
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+:root {
+    --surface-color: #ffffff;
+    --heading-color: #740783;
+    --accent-color: #7209b7;
+    --default-color: #444444;
+    --transition: all 0.3s ease-in-out;
   }
 
-  .card-body {
-    padding: 20px;
+  .login-section {
+    padding: 60px 0;
+    background: #f1f7fd;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
   }
 
-  .card-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 15px;
+  .container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
   }
 
-  .card-description {
-    font-size: 1rem;
-    color: #666;
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+  }
+
+  .login-card {
+    flex: 1;
+    min-width: 280px;
+    max-width: 540px;
+    background: var(--surface-color);
+    border-radius: 15px;
+    padding: 40px 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    animation: fadeInUp 0.5s ease-out;
+  }
+
+  .login-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  }
+
+  .login-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(25, 119, 204, 0.1), transparent);
+    transform: rotate(45deg);
+    transition: var(--transition);
+    opacity: 0;
+  }
+
+  .login-card:hover::before {
+    opacity: 1;
+    animation: shine 1.5s infinite;
+  }
+
+  .icon {
+    font-size: 48px;
+    color: var(--accent-color);
+    margin-bottom: 25px;
+    display: inline-block;
+    transition: var(--transition);
+  }
+
+  .login-card:hover .icon {
+    transform: scale(1.1);
+  }
+
+  .title {
+    font-size: 24px;
+    font-weight: 700;
     margin-bottom: 20px;
+    color: var(--heading-color);
+    transition: var(--transition);
   }
 
-  .btn {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
+  .title a {
+    color: inherit;
     text-decoration: none;
   }
 
-  .btn:hover {
-    background-color: #0056b3;
+  .login-card:hover .title {
+    color: var(--accent-color);
   }
 
-  /* Hover effect untuk card */
-  .hover-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  .description {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--default-color);
+    margin-bottom: 30px;
   }
+
+  .btn {
+    display: inline-block;
+    padding: 12px 35px;
+    background: var(--accent-color);
+    color: white;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+    border: 2px solid var(--accent-color);
+  }
+
+  .btn:hover {
+    background: transparent;
+    color: var(--accent-color);
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes shine {
+    0% {
+      left: -50%;
+    }
+    100% {
+      left: 150%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .login-card {
+      margin: 15px;
+    }
+  }
+
+
+
+  @media (max-width: 768px) {
+    .stats-item, .client-logo, .team-item {
+        flex: 0 0 50%; /* Tampilkan 2 item per baris di layar kecil */
+    }
+}
+
+
